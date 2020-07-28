@@ -1,11 +1,11 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<div class="container">
-    <h2>Active Listings</h2>
+ <div class="container">
+    <h2>Category:{{cat}}</h2>
 
-</div>
-<div class="container" id="listings">
+ </div>
+ <div class="container" id="listings">
     {% for i in items %}
     <div class="card mb-3" style="max-width: 540px;" id="card-listings">
         <div class="row no-gutters">
@@ -24,5 +24,5 @@
         </div>
       </div>
       {% endfor %}
-</div>
+ </div>
 {% endblock %}

@@ -1,12 +1,13 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<div class="container">
-    <h2>Active Listings</h2>
-
-</div>
-<div class="container" id="listings">
-    {% for i in items %}
+ <div class="container">
+    <h2>Watchlist</h2>
+  
+ </div>
+ <div class="container" id="listings">
+    {% for item in items %}
+    {% for i in item %}
     <div class="card mb-3" style="max-width: 540px;" id="card-listings">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -24,5 +25,8 @@
         </div>
       </div>
       {% endfor %}
-</div>
+      {% empty %}
+      <h3>No listings found in your watchlist...</h3>
+      {% endfor %}
+  </div>
 {% endblock %}
