@@ -1,12 +1,13 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<div class="container">
-    <h2>Active Listings</h2>
+ <div class="container">
+    <h2>Your Winnings</h2>
+ </div>
 
-</div>
-<div class="container" id="listings">
-    {% for i in items %}
+ <div class="container" id="listings">
+    {% for item in items %}
+    {% for i in item %}
     <div class="card mb-3" style="max-width: 540px;" id="card-listings">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -16,13 +17,20 @@
             <div class="card-body">
               <h5 class="card-title">{{i.title}}</h5>
               <p class="card-text">{{i.description}}</p>
-              <p class="card-text">${{i.price}}</p>
-              <a href="{% url 'auctions:listingpage' id=i.id %}"><button class="btn btn-outline-success">Bid Now!</button></a>
-              <p class="card-text"><small class="text-muted">{{i.time}}</small></p>
+              {% for j in wonitems %}
+              {% if i.listingid == j.listingid %}
+              <p class="card-text"><b>Winning Bid:</b>${{j.winprice}}</p>
+              <p class="card-text"><b>Owner:</b>{{j.owner}}</p>
+              {% endif %}
+              {% endfor %}
             </div>
           </div>
         </div>
       </div>
+      
       {% endfor %}
-</div>
+      {% endfor %}
+  </div>
 {% endblock %}
+
+
