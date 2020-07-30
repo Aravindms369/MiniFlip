@@ -70,7 +70,7 @@ def submit(request):
         if request.POST.get('link'):
             listtable.link = request.POST.get('link')
         else :
-            listtable.link = "https://wallpaperaccess.com/full/1605486.jpg"
+            listtable.link = "https://previews.123rf.com/images/eatcute/eatcute1411/eatcute141112107/34109553-shopping-flat-app-ui-background-eps10.jpg"
         listtable.time = dt
         listtable.save()
         all = Alllisting()

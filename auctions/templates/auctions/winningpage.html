@@ -7,8 +7,8 @@
  <div class="container" id="listings">
     <h3>This listing is no longer active.</h3>
     {% if cb.winner == user.username %}
-    <h4>Congratulations 🏆</h4>
-    <p>You won this bid.</p>
+      <h6 style="color: red;">The item is not sold to others.</h6>
+      <p style="color: green;">You won this bid.</p>
     {% endif %}
     <ul>
         <li><b>Owner:</b>{{cb.owner}}</li>
