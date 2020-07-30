@@ -28,13 +28,13 @@
                     <a class="nav-link" href="{% url 'auctions:categories' %}">Categories</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'auctions:watchlistpage' username=user.username %}">Watchlist <span class="badge badge-success">{{wcount}}</span></a>
+                    <a class="nav-link" href="{% url 'auctions:watchlist' username=user.username %}">Watchlist <span class="badge badge-light">{{wcount}}</span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'auctions:create' %}">Create Listing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'auctions:mywinnings' %}">Your Winnings</a>
+                    <a class="nav-link" href="{% url 'auctions:winnings' %}">Your Winnings</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'auctions:logout' %}">Logout</a>

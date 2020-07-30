@@ -16,7 +16,7 @@ urlpatterns = [
     path("cmntsubmit/<int:listingid>",views.cmntsubmit,name="cmntsubmit"),
     path("addwatchlist/<int:listingid>",views.addwatchlist,name="addwatchlist"),
     path("removewatchlist/<int:listingid>",views.removewatchlist,name="removewatchlist"),
-    path("watchlist/<str:username>",views.watchlistpage,name="watchlistpage"),
+    path("watchlist/<str:username>",views.watchlist,name="watchlist"),
     path("closebid/<int:listingid>",views.closebid,name="closebid"),
-    path("mywinnings/",views.mywinnings,name="mywinnings")
+    path("winnings/",views.winnings,name="winnings")
 ]

@@ -29,7 +29,7 @@ def categories(request):
         wcount=len(w)
     except:
         wcount=None
-    return render(request,"auctions/categpage.html",{
+    return render(request,"auctions/categorypage.html",{
         "items": items,
         "wcount":wcount
     })
@@ -95,7 +95,7 @@ def listingpage(request,id):
     try:
         item = Listing.objects.get(id=id)
     except:
-        return redirect('index')
+        return redirect('auctions:index')
     try:
         comments = Comment.objects.filter(listingid=id)
     except:
@@ -113,7 +113,7 @@ def listingpage(request,id):
             else:
                 owner=False
         except:
-            return redirect('index')
+            return redirect('auctions:index')
     else:
         added=False
         owner=False
@@ -206,7 +206,7 @@ def removewatchlist(request,listingid):
     else:
         return redirect('auctions:index')
 
-def watchlistpage(request,username):
+def watchlist(request,username):
     if request.user.username:
         try:
             w = Watchlist.objects.filter(user=username)
@@ -218,7 +218,7 @@ def watchlistpage(request,username):
                 wcount=len(w)
             except:
                 wcount=None
-            return render(request,"auctions/watchlistpage.html",{
+            return render(request,"auctions/watchlist.html",{
                 "items":items,
                 "wcount":wcount
             })
@@ -228,7 +228,7 @@ def watchlistpage(request,username):
                 wcount=len(w)
             except:
                 wcount=None
-            return render(request,"auctions/watchlistpage.html",{
+            return render(request,"auctions/watchlist.html",{
                 "items":None,
                 "wcount":wcount
             })
@@ -297,7 +297,7 @@ def closebid(request,listingid):
     else:
         return redirect('auctions:index')     
 
-def mywinnings(request):
+def winnings(request):
     if request.user.username:
         items=[]
         try:
@@ -312,7 +312,7 @@ def mywinnings(request):
             wcount=len(w)
         except:
             wcount=None
-        return render(request,'auctions/mywinnings.html',{
+        return render(request,'auctions/winnings.html',{
             "items":items,
             "wcount":wcount,
             "wonitems":wonitems
