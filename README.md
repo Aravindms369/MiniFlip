@@ -7,18 +7,16 @@ This is a Django based web-app. This app helps users to sell and buy items onlin
 
 **DataBase: Sqlite3**  
 
-**Framework: Django**
+**Frameworks: Django, Bootstrap**
 
 ###### To Run This App Follow These Steps:  
 1. Download This Repository Zip File/ Clone This Repository  
 2. Run Migrations  
 ```
 python manage.py migrate
-
 ```  
 3. Run Server
 ```
 python manage.py runserver
-
 ```  
 4. Now You can Access the App in Localhost
