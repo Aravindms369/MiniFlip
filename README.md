@@ -13,5 +13,12 @@ This is a Django based web-app. This app helps users to sell and buy items onlin
 1. Download This Repository Zip File/ Clone This Repository  
 2. Run Migrations  
 ```
-Python manage.py migrations
+python manage.py migrate
+
 ```  
+3. Run Server
+```
+python manage.py runserver
+
+```  
+4. Now You can Access the App in Localhost
