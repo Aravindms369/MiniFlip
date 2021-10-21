@@ -5,7 +5,7 @@ This is a Django based web-app. This app helps users to sell and buy items onlin
 
 **Back-End Technologies: Python**  
 
-**DataBase: Sqlite3**  
+**Database: Sqlite3**  
 
 **Frameworks: Django, Bootstrap**
 
